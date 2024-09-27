@@ -1,0 +1,75 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #000000;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(235, 136, 7), rgb(240, 14, 14));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #6b1212, rgb(199, 23, 10));
+}
+
+/* Solo aplicar a los placeholders de los inputs */
+.form-control::placeholder {
+    font-size: 0.8rem; 
+}
+
+/* Asegúrate de que el tamaño del texto del input siga siendo grande */
+.form-control {
+    font-size: 1rem; /* Este es el tamaño del texto del input, ajústalo si es necesario */
+}
+
+/* Estilos responsivos para el formulario */
+@media (max-width: 576px) {
+    .gradient-custom {
+        height: 100vh; /* Asegúrate de que la sección ocupe toda la altura de la pantalla */
+    }
+
+    .card {
+        width: 90%; /* Ajustar el ancho de la tarjeta en móviles */
+        margin: auto; /* Centrar la tarjeta */
+        max-width: 350px; /* Limitar el ancho máximo de la tarjeta */
+    }
+
+    .card-body {
+        padding: 2rem; /* Ajustar el padding en móviles */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centrar el contenido verticalmente */
+    }
+
+    .btn {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho en móviles */
+        padding: 0.5rem; /* Ajustar el tamaño del botón */
+    }
+
+    .form-outline {
+        margin-bottom: 1rem; /* Ajustar el margen entre los inputs */
+    }
+}
+
+/* Estilos para dispositivos mayores de 576px */
+@media (min-width: 577px) {
+    .gradient-custom {
+        height: 100vh; /* Asegúrate de que la sección ocupe toda la altura de la pantalla */
+    }
+
+    .card {
+        width: 100%; /* Ajustar el ancho de la tarjeta en dispositivos más grandes */
+        max-width: 400px; /* Limitar el ancho máximo de la tarjeta */
+        margin: auto; /* Centrar la tarjeta */
+    }
+
+    .card-body {
+        padding: 3rem; /* Ajustar el padding en dispositivos más grandes */
+    }
+
+    .btn {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho */
+        padding: 0.5rem; /* Ajustar el tamaño del botón */
+    }
+
+    .form-outline {
+        margin-bottom: 1.5rem; /* Ajustar el margen entre los inputs */
+    }
+}
